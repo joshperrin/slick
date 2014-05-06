@@ -6,11 +6,15 @@ Package.on_use(function (api) {
     api.use('jquery', 'client');
     api.add_files([
         'lib/slick/slick/slick.js',
-        'lib/slick/slick/slick.css',
+        'lib/slick/slick/slick.css'
+        ], 'client'
+    };
+    api.add_files([
         'lib/slick/slick/fonts/slick.eot',
         'lib/slick/slick/fonts/slick.svg',
         'lib/slick/slick/fonts/slick.ttf',
         'lib/slick/slick/fonts/slick.woff'
-        ], 'client'
+        ], 'server',
+        {isAsset: true}
     );
 });
